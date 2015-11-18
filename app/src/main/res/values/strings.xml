@@ -9,4 +9,8 @@
     <string name="title_activity_basic_fragment">BasicFragmentActivity</string>
     <string name="pref_screen_background">Screen Background</string>
     <string name="summary_screen_background">Screen background is white</string>
+    <string name="action_add_note">Add Note</string>
+    <string name="action_edit_note">Edit Note</string>
+    <string name="okButton">Ok</string>
+    <string name="cancelButton">Cancel</string>
 </resources>

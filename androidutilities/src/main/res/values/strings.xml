@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidUtilities</string>
+    <string name="okButton">Ok</string>
+    <string name="cancelButton">Cancel</string>
+</resources>

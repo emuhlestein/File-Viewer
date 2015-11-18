@@ -25,8 +25,10 @@ public class MainActivity extends BasicFragmentActivity implements FileListFragm
 
     @Override
     protected Fragment createFragment() {
-        mDir = Environment.getExternalStorageDirectory();
-        mRoot = mDir;
+        mRoot = Environment.getExternalStorageDirectory();
+        String currentDir = QueryPreferences.getCurrentDirectory(this);
+        mDir = new File(mRoot, currentDir);
+        mDir = mRoot;
         Fragment fragment = FileListFragment.newInstance(mDir);
         return fragment;
     }
@@ -81,8 +83,7 @@ public class MainActivity extends BasicFragmentActivity implements FileListFragm
             fragment = FileListFragment.newInstance(file);
         } else {
             if(file.getName().contains(".txt")) {
-                String data = AndroidUtils.readData(file);
-                fragment = FileViewFragment.newInstance(data);
+                fragment = FileViewFragment.newInstance(file);
             } else if(file.getName().contains(".pdf")) {
                 Intent intent;
 
